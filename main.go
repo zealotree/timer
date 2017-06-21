@@ -22,7 +22,6 @@ func MyTimer(duration time.Duration) {
 	}()
 	time.Sleep(duration / time.Nanosecond)
 	ticker.Stop()
-	fmt.Printf("\n Timer completed! \n")
 }
 
 func main() {
