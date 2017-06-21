@@ -1,7 +1,7 @@
 # timer
 A simple countdown timer written in Go
 
-<script type="text/javascript" src="https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j.js" id="asciicast-tAtuba3KGefNfPBTqpbexl09j" async></script>
+<a href="https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j" target="_blank"><img src="https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j.png" /></a>
 
 
 ## Install
