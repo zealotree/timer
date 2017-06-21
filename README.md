@@ -11,22 +11,22 @@ A simple countdown timer written in Go
 ## Usage
 
 ```
-$ timer 2s 
-$ timer 1h 
-$ timer 525600m
-$ timer 1h30m10s
+timer 2s 
+timer 1h 
+timer 525600m
+timer 1h30m10s
 ```
 
 
 
 ## Play a beep after your timer
 
-``` $timer 2s ; mpv --really-quiet beep.ogg ```
+```timer 2s ; mpv --really-quiet beep.ogg ```
 
 ### Make some presets using aliases
 
 *fish shell 2.6*
 ```
-$ abbr -a 'greentea' 'timer 1m20s ; mpv --really-quiet teatimer.ogg'
+abbr -a 'greentea' 'timer 1m20s ; mpv --really-quiet teatimer.ogg'
 
 ```
