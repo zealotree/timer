@@ -1,5 +1,9 @@
+[![asciicast](https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j.png)](https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j)
+
+
 # timer
 A simple countdown timer written in Go
+
 
 ## Install
 
@@ -15,3 +19,7 @@ A simple countdown timer written in Go
  Timer completed! 
 
 ```
+
+## Play a beep after your timer
+
+``` $timer 2s ; mpv --really-quit beep.ogg ```
