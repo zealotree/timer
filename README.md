@@ -1,8 +1,7 @@
-[![asciicast](https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j.png)](https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j)
-
-
 # timer
 A simple countdown timer written in Go
+
+<script type="text/javascript" src="https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j.js" id="asciicast-tAtuba3KGefNfPBTqpbexl09j" async></script>
 
 
 ## Install
@@ -22,4 +21,4 @@ A simple countdown timer written in Go
 
 ## Play a beep after your timer
 
-``` $timer 2s ; mpv --really-quit beep.ogg ```
+``` $timer 2s ; mpv --really-quiet beep.ogg ```
