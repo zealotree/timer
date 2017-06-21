@@ -10,17 +10,14 @@ A simple countdown timer written in Go
 
 ## Usage
 
-```$ timer 2s ```
-```$ timer 1h ```
-```$ timer 525600m ```
-```$ timer 1h30m10s ```
-
 ```
- 00:00:01
- 00:00:00
- Timer completed! 
-
+$ timer 2s 
+$ timer 1h 
+$ timer 525600m
+$ timer 1h30m10s
 ```
+
+
 
 ## Play a beep after your timer
 
