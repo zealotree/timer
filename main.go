@@ -9,13 +9,19 @@ func MyTimer(duration time.Duration) {
 
 	start_time := time.Now()
 	end_time := start_time.Add(duration)
+	h := big.NewInt(int64(time.Until(end_time).Hours()))
+		m := big.NewInt(int64(time.Until(end_time).Minutes()))
+		s := big.NewInt(int64(time.Until(end_time).Seconds()))
+		s = s.Mod(s, big.NewInt(60))
+		m = m.Mod(m, big.NewInt(60))
+		fmt.Printf("\r %02d:%02d:%02d", h, m, s)
 	ticker1 := time.NewTicker(1 * time.Second)
 	i := int64(1)
 	for _ = range ticker1.C {
 		i++
-		h := big.NewInt(int64(time.Until(end_time).Hours()))
-		m := big.NewInt(int64(time.Until(end_time).Minutes()))
-		s := big.NewInt(int64(time.Until(end_time).Seconds()))
+		h = big.NewInt(int64(time.Until(end_time).Hours()))
+		m = big.NewInt(int64(time.Until(end_time).Minutes()))
+		s = big.NewInt(int64(time.Until(end_time).Seconds()))
 		s = s.Mod(s, big.NewInt(60))
 		m = m.Mod(m, big.NewInt(60))
 		fmt.Printf("\r %02d:%02d:%02d", h, m, s)
