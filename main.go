@@ -6,17 +6,18 @@ import "os"
 import "math/big"
 
 func MyTimer(duration time.Duration) {
-
-	start_time := time.Now()
+start_time := time.Now()
 	end_time := start_time.Add(duration)
 	h := big.NewInt(int64(time.Until(end_time).Hours()))
-		m := big.NewInt(int64(time.Until(end_time).Minutes()))
-		s := big.NewInt(int64(time.Until(end_time).Seconds()))
-		s = s.Mod(s, big.NewInt(60))
-		m = m.Mod(m, big.NewInt(60))
-		fmt.Printf("\r %02d:%02d:%02d", h, m, s)
-	ticker1 := time.NewTicker(1 * time.Second)
+	m := big.NewInt(int64(time.Until(end_time).Minutes()))
+	s := big.NewInt(int64(time.Until(end_time).Seconds()))
+	s = s.Mod(s, big.NewInt(60))
+	m = m.Mod(m, big.NewInt(60))
+	fmt.Printf("Start:\t %s \n", start_time.Format(time.ANSIC))
+	fmt.Printf("End:\t %s\n", end_time.Format(time.ANSIC))
+	fmt.Printf("\rTimer:\t %02d:%02d:%02d", h, m, s)
 	i := int64(1)
+	ticker1 := time.NewTicker(1 * time.Second)
 	for _ = range ticker1.C {
 		i++
 		h = big.NewInt(int64(time.Until(end_time).Hours()))
@@ -24,7 +25,7 @@ func MyTimer(duration time.Duration) {
 		s = big.NewInt(int64(time.Until(end_time).Seconds()))
 		s = s.Mod(s, big.NewInt(60))
 		m = m.Mod(m, big.NewInt(60))
-		fmt.Printf("\r %02d:%02d:%02d", h, m, s)
+		fmt.Printf("\rTimer:\t %02d:%02d:%02d", h, m, s)
 		if i > int64(duration/time.Second) {
 			ticker1.Stop()
 			break
