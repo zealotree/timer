@@ -1,8 +1,7 @@
 # timer
 A simple countdown timer written in Go
 
-<a href="https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j" target="_blank"><img src="https://asciinema.org/a/tAtuba3KGefNfPBTqpbexl09j.png" /></a>
-
+<a href="https://asciinema.org/a/zPu5YefHKcD2Uvy2vdV4hXSzE" target="_blank"><img src="https://asciinema.org/a/zPu5YefHKcD2Uvy2vdV4hXSzE.png" /></a>
 
 ## Install
 
@@ -17,9 +16,13 @@ timer 525600m
 timer 1h30m10s
 ```
 
+### Add A Message for Context
+
+```timer 10m "Turn off the stove"```
 
 
-## Play a beep after your timer
+
+### Play a beep after your timer
 
 ```timer 2s ; mpv --really-quiet beep.ogg ```
 
